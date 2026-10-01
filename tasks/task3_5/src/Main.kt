@@ -7,4 +7,7 @@ import kotlin.io.path.writeText
 
 fun main() {
     // Add your code here
+    val filePath = Path("text.txt")
+    val mes = filePath.readText()
+    println(mes)
 }
