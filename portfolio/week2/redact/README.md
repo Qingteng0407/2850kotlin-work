@@ -5,7 +5,7 @@ document, typically by 'blanking out' that information in some way. Your task
 here is to write a function that performs this operation on a string.
 
 This function should be implemented in the file `redact/src/Redaction.kt`.
-It should be named `redact()`, and it should have three parameters:
+It should be named `redact()`, and it should have **three** parameters:
 
 1. The input document, in the form of a `String` object
 2. The text to be redacted from the document, also a `String` object
@@ -37,7 +37,7 @@ to run the tests:
 These tests should compile and run but fail. At this point, you can proceed
 with rewriting the function so that it behaves in the manner described above.
 
-You will find it useful to consult the [API documentation for `String`][api].
+You will find it useful to consult the [API documentation for ``][api].
 Select the 'Members & Extensions' tab, then scroll down the list of extension
 functions to see if there is anything there that can help...
 
