@@ -5,4 +5,9 @@ import kotlin.test.assertEquals
 
 class GradeTest {
     // Write tests here
+    @Test
+    fun markOfFiftyFiveGivesPass() {
+        assertEquals("Pass", grade(55))
+    }
+
 }
