@@ -2,18 +2,32 @@
 
 import kotlin.io.path.Path
 import kotlin.io.path.forEachLine
-import kotlin.io.path.writer
+import kotlin.io.path.readLines
+import kotlin.io.path.writeLines
 
 typealias Database = MutableMap<String,String>
 
 fun createDatabase() = mutableMapOf<String,String>()
-
+// 读取文件中的名字写入文件
+//文件 → List → Map（读取数据）
 fun Database.load(filename: String) {
-    // Add code here to read names and numbers from the file
-    // and insert them as keys and values into the map
-}
+    val lines = Path(filename).readLines()
 
+    for (line in lines) {
+        val parts = line.split(",")
+
+        if (parts.size == 2) {
+            this[parts[0]] = parts[1]
+        }
+    }
+}
+// 读取数据库中的数据写入文件
 fun Database.save(filename: String) {
-    // Add code here to write the keys and values of the map to
-    // the file, separated by a comma, one pairing per line
+    val lines = mutableListOf<String>()
+
+    for ((key, value) in this) {
+        lines.add("$key,$value")
+    }
+
+    Path(filename).writeLines(lines)
 }

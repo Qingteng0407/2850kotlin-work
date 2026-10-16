@@ -11,6 +11,7 @@ fun main(args: Array<String>) {
     }
 
     val timeWithout = measureTime {
+        // 过滤空白
         File(args[0]).readLines().filter { it.isNotBlank() }.filter { it.length < 10 }
             .map { it.lowercase() }
     }
@@ -18,6 +19,7 @@ fun main(args: Array<String>) {
     val timeWith = measureTime {
         File(args[0]).useLines { seq ->
             seq.filter { it.isNotBlank() }.filter { it.length < 10 }
+                // 转换为小写
                 .map { it.lowercase() }.toList()
         }
     }
