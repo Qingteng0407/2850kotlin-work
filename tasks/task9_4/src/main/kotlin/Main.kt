@@ -7,6 +7,7 @@ fun main() {
         print("Enter denominator: ")
         val denominator = readln().toInt()
 
+        // 计算除法
         val result = numerator / denominator
         val remainder = numerator % denominator
         println("Result = $result remainder $remainder")
