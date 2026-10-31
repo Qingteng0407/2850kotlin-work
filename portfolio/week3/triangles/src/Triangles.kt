@@ -29,6 +29,6 @@ fun triangleArea(triangle:Triangle): Double{
         val b = triangle.second
         val c = triangle.third
         val s = (a + b + c) / 2
-        val area = sqrt(s * (s - a) * (s - b) * (s - c))
+        val area = sqrt (s * (s - a) * (s - b) * (s - c))
         return area
 }
